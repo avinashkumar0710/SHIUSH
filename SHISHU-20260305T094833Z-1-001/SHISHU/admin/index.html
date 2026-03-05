@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel — SHIUSH Clinics</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+</head>
+
+<body>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-card">
+            <div class="login-logo">🏥</div>
+            <div class="login-title">Admin Panel</div>
+            <div class="login-sub">SHIUSH Clinics — Restricted Access</div>
+            <div class="login-field">
+                <input type="password" id="loginPassword" placeholder="Enter admin password"
+                    autocomplete="current-password">
+            </div>
+            <button class="login-btn" onclick="doLogin()">🔐 Sign In</button>
+            <div class="login-error" id="loginError">❌ Incorrect password. Please try again.</div>
+        </div>
+    </div>
+
+    <!-- App -->
+    <div class="app" id="app" style="display:none;">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-head">
+                <div class="sidebar-logo">
+                    <div class="sidebar-logo-icon">🏥</div>
+                    <div>
+                        <div class="sidebar-logo-name">SHIUSH CLINICS</div>
+                        <div class="sidebar-logo-role">Admin Panel</div>
+                    </div>
+                </div>
+                <div class="sidebar-badge">● Live Site Active</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">Overview</div>
+                <div class="nav-item active" onclick="showPanel('dashboard',this)">
+                    <span class="nav-icon">📊</span> Dashboard
+                </div>
+
+                <div class="nav-section-label">Site Content</div>
+                <div class="nav-item" onclick="showPanel('clinic',this)">
+                    <span class="nav-icon">🏥</span> Clinic Info
+                </div>
+                <div class="nav-item" onclick="showPanel('doctor',this)">
+                    <span class="nav-icon">👨‍⚕️</span> Doctor
+                </div>
+                <div class="nav-item" onclick="showPanel('hero',this)">
+                    <span class="nav-icon">🌟</span> Hero Section
+                </div>
+                <div class="nav-item" onclick="showPanel('stats',this)">
+                    <span class="nav-icon">📈</span> Stats Bar
+                </div>
+                <div class="nav-item" onclick="showPanel('about',this)">
+                    <span class="nav-icon">📋</span> About Section
+                </div>
+                <div class="nav-item" onclick="showPanel('services',this)">
+                    <span class="nav-icon">🩺</span> Services
+                </div>
+                <div class="nav-item" onclick="showPanel('faq',this)">
+                    <span class="nav-icon">❓</span> FAQ
+                </div>
+                <div class="nav-item" onclick="showPanel('news',this)">
+                    <span class="nav-icon">📢</span> News &amp; Updates
+                </div>
+                <div class="nav-item" onclick="showPanel('warrior',this)">
+                    <span class="nav-icon">🏆</span> Our Warrior
+                </div>
+
+                <div class="nav-section-label">Inbox</div>
+                <div class="nav-item" onclick="showPanel('appointments',this)" id="nav-appointments">
+                    <span class="nav-icon">📅</span> Appointments
+                    <span class="nav-badge" id="apptBadge" style="display:none">0</span>
+                </div>
+                <div class="nav-item" onclick="showPanel('feedback',this)" id="nav-feedback">
+                    <span class="nav-icon">⭐</span> Feedback
+                    <span class="nav-badge" id="fbBadge" style="display:none">0</span>
+                </div>
+
+                <div class="nav-section-label">Settings</div>
+                <div class="nav-item" onclick="showPanel('password',this)">
+                    <span class="nav-icon">🔑</span> Change Password
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="logout-btn" onclick="doLogout()">🚪 Sign Out</button>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <div class="main-content">
+            <div class="topbar">
+                <div>
+                    <div class="topbar-title" id="topbarTitle">Dashboard</div>
+                    <div class="topbar-sub" id="topbarSub">Overview of your clinic website</div>
+                </div>
+                <button class="save-btn" id="saveBtn" onclick="saveCurrentSection()" style="display:none">
+                    💾 Save Changes
+                </button>
+            </div>
+
+            <div class="content-area">
+
+                <!-- ── DASHBOARD ── -->
+                <div class="panel active" id="panel-dashboard">
+                    <div class="dashboard-grid" id="dashStats"></div>
+                    <div class="section-card">
+                        <div class="card-title"><span>🔗</span> Quick Links</div>
+                        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                            <a href="/" target="_blank" class="add-item-btn">🌐 View Live Site</a>
+                            <button class="add-item-btn"
+                                onclick="showPanel('appointments', document.querySelector('[onclick*=appointments]'))">📅
+                                View Appointments</button>
+                            <button class="add-item-btn"
+                                onclick="showPanel('feedback', document.querySelector('[onclick*=feedback]'))">⭐ View
+                                Feedback</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── CLINIC INFO ── -->
+                <div class="panel" id="panel-clinic">
+                    <div class="section-card">
+                        <div class="card-title"><span>🏥</span> Clinic Information</div>
+                        <div class="form-grid">
+                            <div class="form-group"><label>Clinic Name</label><input id="clinic_name"></div>
+                            <div class="form-group"><label>Tagline</label><input id="clinic_tagline"></div>
+                            <div class="form-group"><label>Phone 1</label><input id="clinic_phone1"></div>
+                            <div class="form-group"><label>Phone 2 (Camp)</label><input id="clinic_phone2"></div>
+                            <div class="form-group full"><label>Email Address</label><input id="clinic_email"
+                                    type="email"></div>
+                            <div class="form-group full"><label>Address</label><input id="clinic_address"></div>
+                            <div class="form-group"><label>Timings</label><input id="clinic_timings"></div>
+                            <div class="form-group"><label>Messaging Fee (₹)</label><input id="clinic_fee_messaging"
+                                    type="number"></div>
+                            <div class="form-group"><label>Video Fee (₹)</label><input id="clinic_fee_video"
+                                    type="number"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── DOCTOR ── -->
+                <div class="panel" id="panel-doctor">
+                    <div class="section-card">
+                        <div class="card-title"><span>👨‍⚕️</span> Doctor Information</div>
+                        <div class="form-grid">
+                            <div class="form-group"><label>Doctor Name</label><input id="doctor_name"></div>
+                            <div class="form-group"><label>Degree</label><input id="doctor_degree"></div>
+                            <div class="form-group"><label>Title / Specialization</label><input id="doctor_title"></div>
+                            <div class="form-group full"><label>Bio</label><textarea id="doctor_bio"></textarea></div>
+                            <div class="form-group full">
+                                <label>Badges (one per line)</label>
+                                <textarea id="doctor_badges" style="height:100px;"
+                                    placeholder="MBBS Qualified&#10;General Physician&#10;Preventive Medicine"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── HERO ── -->
+                <div class="panel" id="panel-hero">
+                    <div class="section-card">
+                        <div class="card-title"><span>🌟</span> Hero Section</div>
+                        <div class="form-group"><label>Badge Text</label><input id="hero_badge"></div>
+                        <div class="form-group"><label>Hero Description</label><textarea
+                                id="hero_description"></textarea></div>
+                        <div class="form-group">
+                            <label>Typewriter Phrases (one per line)</label>
+                            <textarea id="hero_typewriter" style="height:120px;"
+                                placeholder="General Physician&#10;Preventive Medicine&#10;Compassionate Care"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── STATS ── -->
+                <div class="panel" id="panel-stats">
+                    <div class="section-card">
+                        <div class="card-title"><span>📈</span> Stats Bar</div>
+                        <div class="form-grid-3">
+                            <div class="form-group"><label>Patients Treated</label><input id="stats_patients"
+                                    type="number"></div>
+                            <div class="form-group"><label>Years Experience</label><input id="stats_years"
+                                    type="number"></div>
+                            <div class="form-group"><label>Starting Fee (₹)</label><input id="stats_fee" type="number">
+                            </div>
+                            <div class="form-group"><label>Days per Week</label><input id="stats_days" type="number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── ABOUT ── -->
+                <div class="panel" id="panel-about">
+                    <div class="section-card">
+                        <div class="card-title"><span>📋</span> About Section</div>
+                        <div class="form-group"><label>Section Title</label><input id="about_title"></div>
+                        <div class="form-group"><label>Subtitle / Description</label><textarea
+                                id="about_subtitle"></textarea></div>
+                    </div>
+                </div>
+
+                <!-- ── SERVICES ── -->
+                <div class="panel" id="panel-services">
+                    <div class="section-card">
+                        <div class="card-title"><span>🩺</span> Services</div>
+                        <div id="services-list"></div>
+                        <button class="add-item-btn" onclick="addService()">+ Add Service</button>
+                    </div>
+                </div>
+
+                <!-- ── FAQ ── -->
+                <div class="panel" id="panel-faq">
+                    <div class="section-card">
+                        <div class="card-title"><span>❓</span> Frequently Asked Questions</div>
+                        <div id="faq-list"></div>
+                        <button class="add-item-btn" onclick="addFaq()">+ Add FAQ Item</button>
+                    </div>
+                </div>
+
+                <!-- ── NEWS ── -->
+                <div class="panel" id="panel-news">
+                    <div class="section-card">
+                        <div class="card-title"><span>📢</span> News &amp; Updates</div>
+                        <div id="news-list"></div>
+                        <button class="add-item-btn" onclick="addNews()">+ Add News Card</button>
+                    </div>
+                </div>
+
+                <!-- ── WARRIOR ── -->
+                <div class="panel" id="panel-warrior">
+                    <div class="section-card">
+                        <div class="card-title"><span>🏆</span> Our Warrior — Patient Story</div>
+                        <div class="form-grid">
+                            <div class="form-group"><label>Patient Name</label><input id="warrior_name"></div>
+                            <div class="form-group"><label>Age Display</label><input id="warrior_age"
+                                    placeholder="Age 7"></div>
+                            <div class="form-group full"><label>Condition</label><input id="warrior_condition"></div>
+                            <div class="form-group full"><label>Patient Story</label><textarea
+                                    id="warrior_story"></textarea></div>
+                            <div class="form-group full"><label>Doctor's Quote</label><textarea
+                                    id="warrior_quote"></textarea></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── APPOINTMENTS ── -->
+                <div class="panel" id="panel-appointments">
+                    <div class="section-card">
+                        <div class="card-title"><span>📅</span> Appointment Requests</div>
+                        <div id="appointments-table-wrap"></div>
+                    </div>
+                </div>
+
+                <!-- ── FEEDBACK ── -->
+                <div class="panel" id="panel-feedback">
+                    <div class="section-card">
+                        <div class="card-title"><span>⭐</span> Patient Feedback</div>
+                        <div id="feedback-table-wrap"></div>
+                    </div>
+                </div>
+
+                <!-- ── PASSWORD ── -->
+                <div class="panel" id="panel-password">
+                    <div class="section-card password-section">
+                        <div class="card-title"><span>🔑</span> Change Admin Password</div>
+                        <div class="form-group"><label>New Password</label><input type="password" id="newPassword"
+                                placeholder="Enter new password (min 6 chars)"></div>
+                        <div class="form-group"><label>Confirm Password</label><input type="password"
+                                id="confirmPassword" placeholder="Repeat new password"></div>
+                        <button class="save-btn" onclick="changePassword()"
+                            style="display:inline-flex;margin-top:8px;">🔐 Update Password</button>
+                    </div>
+                </div>
+
+            </div><!-- /content-area -->
+        </div><!-- /main-content -->
+    </div><!-- /app -->
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

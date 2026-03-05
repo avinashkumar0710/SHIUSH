@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SHIUSH Clinics – Compassionate healthcare by Dr. Nitish Shukla, MBBS. Book appointments, video consultations, and general physician services in Bhilai, Chhattisgarh.">
+    <title>SHIUSH Clinics | Dr. Nitish Shukla – General Physician, Bhilai</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon emoji fallback -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+</head>
+
+<body>
+
+    <!-- ============================================
+     NAVBAR
+     ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="nav-logo">
+                <div class="nav-logo-icon">🏥</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name" data-clinic-name>SHIUSH CLINICS</span>
+                    <span class="nav-logo-tagline" data-clinic-tagline>Health is the root of happiness</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctor">Doctor</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#appointment" class="nav-cta">Book Now</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+     HERO SECTION
+     ============================================ -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge reveal" data-hero-badge>🟢 &nbsp;Now Accepting Patients</div>
+                <h1 class="hero-title reveal delay-1">
+                    SHIUSH<br><span>CLINICS</span>
+                </h1>
+                <p class="hero-tagline reveal delay-2" data-clinic-tagline>"Health is the root of happiness"</p>
+                <p class="hero-description reveal delay-3" data-hero-desc>
+                    Expert healthcare led by <strong data-doctor-name>Dr. Nitish Shukla</strong>, <strong
+                        data-doctor-degree>MBBS</strong> — providing
+                    compassionate consultations, preventive care, and chronic condition management
+                    for the Bhilai community.
+                </p>
+                <p class="hero-description reveal delay-3"
+                    style="margin-top: -16px; margin-bottom: 36px; font-size: 0.9rem; color: rgba(255,255,255,0.55);">
+                    Specializing in: <em id="typewriter"
+                        style="color: #00C9A7; font-style: normal; font-weight: 600;">General Physician</em>
+                </p>
+                <div class="hero-actions reveal delay-4">
+                    <a href="#appointment" class="btn btn-primary">📅 Book Appointment</a>
+                    <a href="https://api.whatsapp.com/send/?phone=918305194236" target="_blank"
+                        class="btn btn-whatsapp">💬 WhatsApp Us</a>
+                </div>
+                <div class="hero-info-pills reveal delay-5">
+                    <div class="info-pill"><span class="icon">💰</span><span data-clinic-fee-msg>₹100</span> Messaging /
+                        <span data-clinic-fee-vid>₹300</span> Video Call</div>
+                    <div class="info-pill"><span class="icon">🕐</span><span data-clinic-timings>Mon–Sat, 10 AM – 7
+                            PM</span></div>
+                    <div class="info-pill"><span class="icon">📍</span><span data-clinic-address>Link Road Camp 2,
+                            Bhilai</span></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-card">
+                    <img src="doctor_hero.png" alt="Dr. Nitish Shukla – General Physician at SHIUSH Clinics">
+                    <div class="hero-floating-card card-1">
+                        <div class="floating-icon teal">🩺</div>
+                        <div class="floating-card-text">
+                            <strong>MBBS Certified</strong>
+                            <span>General Physician</span>
+                        </div>
+                    </div>
+                    <div class="hero-floating-card card-2">
+                        <div class="floating-icon orange">❤️</div>
+                        <div class="floating-card-text">
+                            <strong>500+ Patients</strong>
+                            <span>Treated with care</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     STATS BAR
+     ============================================ -->
+    <section class="stats-bar" id="statsBar">
+        <div class="container">
+            <div class="stat-item reveal">
+                <div class="stat-number">
+                    <span class="counter" data-target="500" data-stat-patients>0</span>+
+                </div>
+                <div class="stat-label">Patients Treated</div>
+            </div>
+            <div class="stat-item reveal delay-1">
+                <div class="stat-number">
+                    <span class="counter" data-target="5" data-stat-years>0</span>+
+                </div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item reveal delay-2">
+                <div class="stat-number">
+                    ₹<span class="counter" data-target="100" data-stat-fee>0</span>
+                </div>
+                <div class="stat-label">Starting Consultation</div>
+            </div>
+            <div class="stat-item reveal delay-3">
+                <div class="stat-number">
+                    <span class="counter" data-target="6" data-stat-days>0</span>
+                </div>
+                <div class="stat-label">Days a Week</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     ABOUT / DOCTOR SECTION
+     ============================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-image-wrap reveal-left">
+                <div class="doctor-card" id="doctor">
+                    <div class="doctor-avatar">👨‍⚕️</div>
+                    <div class="doctor-name" data-doctor-name>Dr. Nitish Shukla</div>
+                    <div class="doctor-title" data-doctor-title>MBBS · General Physician</div>
+                    <p class="doctor-bio" data-doctor-bio>
+                        Dr. Nitish Shukla is a compassionate and experienced General Physician committed
+                        to providing quality healthcare to all. With a focus on preventive medicine and
+                        patient-centered care, he combines modern diagnostics with a personal approach
+                        to wellness — ensuring every patient feels heard and respected.
+                    </p>
+                    <div class="doctor-badges">
+                        <span class="doctor-badge">✅ MBBS Qualified</span>
+                        <span class="doctor-badge">🩺 General Physician</span>
+                        <span class="doctor-badge">💊 Preventive Medicine</span>
+                        <span class="doctor-badge">❤️ Patient-Centered</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content reveal-right">
+                <div class="section-badge">🏥 About the Clinic</div>
+                <h2 class="section-title" data-about-title>Welcome to<br>SHIUSH Clinics</h2>
+                <p class="section-subtitle" data-about-subtitle>
+                    We are dedicated to providing compassionate and professional healthcare to our community.
+                    From routine checkups to chronic condition management, we're here for you.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon">🔬</div>
+                        <div class="feature-text">
+                            <strong>Modern Diagnostics</strong>
+                            <p>Advanced tools paired with clinical expertise for accurate, fast assessments.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon">📋</div>
+                        <div class="feature-text">
+                            <strong>Personalized Treatment Plans</strong>
+                            <p>Every patient receives a care plan tailored to their unique health needs.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon">💻</div>
+                        <div class="feature-text">
+                            <strong>Online & In-Person Consultations</strong>
+                            <p>Book a video call or visit us in Bhilai — flexible care on your terms.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon">📞</div>
+                        <div class="feature-text">
+                            <strong>Always Accessible</strong>
+                            <p>Reach us by phone, WhatsApp, or email — we respond promptly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     SERVICES SECTION
+     ============================================ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge reveal">🩺 What We Offer</div>
+                <h2 class="section-title reveal delay-1">Our Medical Services</h2>
+                <p class="section-subtitle reveal delay-2">
+                    Comprehensive care covering a wide range of common and chronic conditions,
+                    delivered with expertise and compassion.
+                </p>
+            </div>
+            <div class="services-grid" id="servicesGrid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🤒</div>
+                    <h3 class="service-name">General Consultation</h3>
+                    <p class="service-desc">Diagnosis and treatment for fever, infections, cold, flu, and common
+                        ailments.</p>
+                </div>
+                <div class="service-card reveal delay-1">
+                    <div class="service-icon">💊</div>
+                    <h3 class="service-name">Chronic Disease Management</h3>
+                    <p class="service-desc">Ongoing care and monitoring for diabetes, hypertension, and other long-term
+                        conditions.</p>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="service-name">Preventive Healthcare</h3>
+                    <p class="service-desc">Routine checkups, health screenings, and vaccinations to keep you healthy.
+                    </p>
+                </div>
+                <div class="service-card reveal delay-1">
+                    <div class="service-icon">📹</div>
+                    <h3 class="service-name">Video Consultation</h3>
+                    <p class="service-desc">Consult Dr. Shukla from the comfort of your home. Just ₹300 per session.</p>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <div class="service-icon">💬</div>
+                    <h3 class="service-name">Online Messaging</h3>
+                    <p class="service-desc">Quick health queries answered via WhatsApp or message. Just ₹100.</p>
+                </div>
+                <div class="service-card reveal delay-3">
+                    <div class="service-icon">🫁</div>
+                    <h3 class="service-name">Burn & Wound Care</h3>
+                    <p class="service-desc">Expert treatment and follow-up for burns, wounds, and post-injury recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     APPOINTMENT SECTION
+     ============================================ -->
+    <section class="appointment" id="appointment">
+        <div class="container">
+            <div class="appt-info">
+                <div class="section-badge reveal">📅 Easy Booking</div>
+                <h2 class="section-title reveal delay-1">Book Your<br>Appointment</h2>
+                <p class="section-subtitle reveal delay-2">
+                    Choose a time that works for you. We'll confirm your slot and reach out promptly.
+                </p>
+                <div class="appt-details reveal delay-3">
+                    <div class="appt-detail-item">
+                        <div class="detail-icon">🕐</div>
+                        <span>Monday to Saturday &nbsp;·&nbsp; 10:00 AM – 7:00 PM</span>
+                    </div>
+                    <div class="appt-detail-item">
+                        <div class="detail-icon">📹</div>
+                        <span>Video Consultation &nbsp;·&nbsp; ₹300</span>
+                    </div>
+                    <div class="appt-detail-item">
+                        <div class="detail-icon">💬</div>
+                        <span>Messaging Consultation &nbsp;·&nbsp; ₹100</span>
+                    </div>
+                    <div class="appt-detail-item">
+                        <div class="detail-icon">📋</div>
+                        <span>Bring previous prescriptions and recent reports if available</span>
+                    </div>
+                    <div class="appt-detail-item">
+                        <div class="detail-icon">📞</div>
+                        <span>Call us: <strong>8305194236</strong></span>
+                    </div>
+                </div>
+            </div>
+            <form class="appointment-form reveal-right" id="appointmentForm" novalidate>
+                <h3 class="form-title">Request an Appointment</h3>
+                <p class="form-subtitle">Fill the form and we'll get back to you within a few hours.</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appt-name">Full Name</label>
+                        <input type="text" id="appt-name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appt-phone">Phone Number</label>
+                        <input type="tel" id="appt-phone" name="phone" placeholder="10-digit mobile number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appt-service">Service Required</label>
+                    <select id="appt-service" name="service" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option>General Consultation</option>
+                        <option>Video Consultation (₹300)</option>
+                        <option>Messaging Consultation (₹100)</option>
+                        <option>Chronic Disease Management</option>
+                        <option>Preventive Checkup</option>
+                        <option>Burn / Wound Care</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appt-date">Preferred Date</label>
+                        <input type="date" id="appt-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appt-time">Preferred Time</label>
+                        <select id="appt-time" name="time">
+                            <option value="" disabled selected>Select time</option>
+                            <option>10:00 AM – 11:00 AM</option>
+                            <option>11:00 AM – 12:00 PM</option>
+                            <option>12:00 PM – 1:00 PM</option>
+                            <option>2:00 PM – 3:00 PM</option>
+                            <option>3:00 PM – 4:00 PM</option>
+                            <option>4:00 PM – 5:00 PM</option>
+                            <option>5:00 PM – 6:00 PM</option>
+                            <option>6:00 PM – 7:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appt-message">Additional Notes</label>
+                    <textarea id="appt-message" name="message"
+                        placeholder="Describe your symptoms or any specific concern..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-submit">📅 Request Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================
+     FAQ SECTION
+     ============================================ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-intro reveal-left">
+                <div class="section-badge">❓ Common Questions</div>
+                <h2 class="section-title">Frequently Asked<br>Questions</h2>
+                <p class="section-subtitle">
+                    Everything you need to know before your visit or online consultation.
+                </p>
+                <a href="https://api.whatsapp.com/send/?phone=918305194236" target="_blank" class="btn btn-whatsapp"
+                    style="margin-top: 16px;">
+                    💬 Ask on WhatsApp
+                </a>
+            </div>
+            <div class="faq-list reveal-right" id="faqList">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>🕐 What are your consultation timings?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We are open <strong>Monday to Saturday, 10:00 AM to 7:00 PM</strong>.
+                            We are closed on Sundays. For emergency queries, please WhatsApp us.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>💰 What are the consultation fees?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <strong>₹100</strong> for online messaging consultations and
+                            <strong>₹300</strong> for video consultations. In-person fees may vary —
+                            please call us for details.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>📋 Do I need to bring any documents?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Please bring any <strong>previous prescriptions</strong> and <strong>recent medical
+                                reports</strong>
+                            if available. This helps Dr. Shukla provide a more accurate diagnosis and
+                            personalized treatment plan.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>📹 How do I do a video consultation?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Book an appointment via the form above or WhatsApp us at
+                            <strong>8305194236</strong>. We'll send you a video call link at your
+                            confirmed appointment time.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>📍 Where are you located?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We are located at <strong>Link Road Camp 2, Bhilai, Chhattisgarh</strong>.
+                            You can also email us at <a href="mailto:shuklanitish762@gmail.com"
+                                style="color: var(--teal-dark); font-weight: 600;">shuklanitish762@gmail.com</a>
+                            for directions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     OUR WARRIOR SECTION
+     ============================================ -->
+    <section class="warrior" id="warrior">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge reveal">🏆 Patient Recovery Story</div>
+                <h2 class="section-title reveal delay-1">Our Warrior</h2>
+                <p class="section-subtitle reveal delay-2" style="margin: 0 auto;">
+                    A testament to the healing power of compassionate, expert medical care.
+                </p>
+            </div>
+            <div class="warrior-card reveal delay-2">
+                <div class="warrior-images">
+                    <div class="warrior-image-wrap warrior-before">
+                        <div class="image-label">Before Treatment</div>
+                    </div>
+                    <div class="warrior-image-wrap warrior-after">
+                        <div class="image-label">After Treatment</div>
+                    </div>
+                </div>
+                <div class="warrior-content">
+                    <div class="warrior-eyebrow">⭐ Recovery Story</div>
+                    <div class="warrior-name" data-warrior-name>Ayush</div>
+                    <div class="warrior-age" data-warrior-condition>Age 7 &nbsp;·&nbsp; Burn Victim Recovery</div>
+                    <p class="warrior-story" data-warrior-story>
+                        Ayush, a 7-year-old boy, came to SHIUSH Clinics after suffering severe burns.
+                        Through expert care and compassionate, personalized treatment by Dr. Nitish Shukla,
+                        he has made a truly remarkable recovery.
+                    </p>
+                    <div class="warrior-quote" data-warrior-quote>
+                        "His story is a true testament to the healing power of modern medicine
+                        and personalized care. We are proud of our brave little warrior."
+                        <br><br><strong>— Dr. Nitish Shukla</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     NEWS & UPDATES SECTION
+     ============================================ -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge reveal">📢 Stay Informed</div>
+                <h2 class="section-title reveal delay-1">Latest News & Updates</h2>
+                <p class="section-subtitle reveal delay-2" style="margin: 0 auto;">
+                    Stay up-to-date with clinic events, health camps, and special offers.
+                </p>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <div class="news-card reveal">
+                    <span class="news-tag urgent">🔴 Tomorrow</span>
+                    <h3 class="news-title">Free Medical Checkup Camp at SHIUSH Clinic!</h3>
+                    <p class="news-body">
+                        Join us tomorrow for a free medical checkup camp open to all community members.
+                        No prior appointment needed.
+                    </p>
+                    <div class="news-meta">📍 Link Road Camp 2, Bhilai &nbsp;·&nbsp; 📞 7646890193</div>
+                </div>
+                <div class="news-card reveal delay-1">
+                    <span class="news-tag info">🎉 Special Offer</span>
+                    <h3 class="news-title">50% Discount on All Lab Tests During the Camp</h3>
+                    <p class="news-body">
+                        During the health camp, avail 50% off on all routine lab tests including
+                        blood work, sugar levels, and more.
+                    </p>
+                    <div class="news-meta">🏷️ Limited time offer &nbsp;·&nbsp; Valid during camp only</div>
+                </div>
+                <div class="news-card reveal delay-2">
+                    <span class="news-tag update">📋 Clinic Update</span>
+                    <h3 class="news-title">Video Consultations Now Available 6 Days a Week</h3>
+                    <p class="news-body">
+                        Dr. Shukla is now available for video consultations Monday through Saturday.
+                        Book your slot at just ₹300 per session.
+                    </p>
+                    <div class="news-meta">💻 Online &nbsp;·&nbsp; ₹300/session</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     CONTACT SECTION
+     ============================================ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge reveal">📫 Get in Touch</div>
+                <h2 class="section-title reveal delay-1">Contact Us</h2>
+                <p class="section-subtitle reveal delay-2" style="margin: 0 auto;">
+                    Reach out by phone, email, WhatsApp, or visit us in Bhilai.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">
+                        <a href="tel:8305194236" data-phone="1" data-clinic-phone1>8305194236</a><br>
+                        <a href="tel:7646890193" data-phone="2" data-clinic-phone2
+                            style="font-size:0.88rem;font-weight:500;">7646890193 (Camp)</a>
+                    </div>
+                </div>
+                <div class="contact-card reveal delay-1">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="mailto:shuklanitish762@gmail.com" data-clinic-email>shuklanitish762@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-card reveal delay-2">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-label">Address</div>
+                    <div class="contact-value" data-clinic-address>Link Road Camp 2,<br>Bhilai, Chhattisgarh</div>
+                </div>
+            </div>
+            <div class="map-wrap reveal delay-3">
+                <a href="https://maps.google.com/?q=Link+Road+Camp+2,+Bhilai,+Chhattisgarh" target="_blank"
+                    rel="noopener" class="map-link-card">
+                    <div class="map-link-inner">
+                        <div class="map-emoji">📍</div>
+                        <div class="map-text">
+                            <strong>SHIUSH Clinics</strong>
+                            <span>Link Road Camp 2, Bhilai, Chhattisgarh</span>
+                        </div>
+                        <div class="map-btn">Open in Google Maps →</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+     PATIENT FEEDBACK SECTION
+     ============================================ -->
+    <section class="feedback" id="feedback">
+        <div class="container">
+            <div class="section-badge reveal">⭐ Share Your Experience</div>
+            <h2 class="section-title reveal delay-1">Patient Feedback</h2>
+            <p class="section-subtitle reveal delay-2">
+                Your feedback helps us serve you better. We'd love to hear from you!
+            </p>
+            <form class="feedback-form reveal delay-2" id="feedbackForm">
+                <div class="form-group">
+                    <label for="fb-name">Your Name</label>
+                    <input type="text" id="fb-name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="fb-message">Your Feedback</label>
+                    <textarea id="fb-message" name="message" placeholder="Share your experience with SHIUSH Clinics..."
+                        style="height: 130px;" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-submit">⭐ Send Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================
+     FOOTER
+     ============================================ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="margin-bottom: 16px;">
+                        <div class="nav-logo-icon">🏥</div>
+                        <div class="nav-logo-text">
+                            <span class="nav-logo-name">SHIUSH CLINICS</span>
+                            <span class="nav-logo-tagline">Health is the root of happiness</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Compassionate, professional healthcare for the Bhilai community.
+                        Led by Dr. Nitish Shukla, MBBS — committed to your well-being.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://api.whatsapp.com/send/?phone=918305194236" target="_blank" class="social-btn"
+                            title="WhatsApp">💬</a>
+                        <a href="mailto:shuklanitish762@gmail.com" class="social-btn" title="Email">✉️</a>
+                        <a href="tel:8305194236" class="social-btn" title="Call">📞</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About the Clinic</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#doctor">Meet the Doctor</a></li>
+                        <li><a href="#appointment">Book Appointment</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:8305194236">📞 8305194236</a></li>
+                        <li><a href="tel:7646890193">📞 7646890193</a></li>
+                        <li><a href="mailto:shuklanitish762@gmail.com">✉️ shuklanitish762@gmail.com</a></li>
+                        <li><a href="#contact">📍 Link Road Camp 2, Bhilai</a></li>
+                        <li>🕐 Mon–Sat, 10 AM – 7 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 <span>SHIUSH CLINICS</span>. All rights reserved. Designed with ❤️ for
+                    better healthcare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+     WHATSAPP FLOATING BUTTON
+     ============================================ -->
+    <a href="https://api.whatsapp.com/send/?phone=918305194236&text=Hello%20Dr.%20Shukla%2C%20I%20would%20like%20to%20book%20an%20appointment."
+        class="whatsapp-fab" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp"
+        aria-label="WhatsApp SHIUSH Clinics">
+        💬
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

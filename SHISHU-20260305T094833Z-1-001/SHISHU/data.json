@@ -1,0 +1,130 @@
+{
+  "clinic": {
+    "name": "SHIUSH CLINICS",
+    "tagline": "Health is the root of happiness",
+    "phone1": "8305194236",
+    "phone2": "7646890193",
+    "email": "shuklanitish762@gmail.com",
+    "address": "Link Road Camp 2, Bhilai, Chhattisgarh",
+    "timings": "Mon–Sat, 10 AM – 7 PM",
+    "fee_messaging": 100,
+    "fee_video": 500
+  },
+  "doctor": {
+    "name": "Dr. Nitish Shukla",
+    "degree": "MBBS",
+    "title": "General Physician",
+    "bio": "Dr. Nitish Shukla is a compassionate and experienced General Physician committed to providing quality healthcare to all. With a focus on preventive medicine and patient-centered care, he combines modern diagnostics with a personal approach to wellness — ensuring every patient feels heard and respected.",
+    "badges": [
+      "MBBS Qualified",
+      "General Physician",
+      "Preventive Medicine",
+      "Patient-Centered"
+    ]
+  },
+  "hero": {
+    "badge": "Now Accepting Patients",
+    "description": "Expert healthcare led by Dr. Nitish Shukla, MBBS — providing compassionate consultations, preventive care, and chronic condition management for the Bhilai community.",
+    "typewriter_phrases": [
+      "General Physician",
+      "Preventive Medicine",
+      "Compassionate Care",
+      "Patient-Centered Wellness"
+    ]
+  },
+  "stats": {
+    "patients": 500,
+    "years": 5,
+    "starting_fee": 100,
+    "days_per_week": 6
+  },
+  "about": {
+    "title": "Welcome to SHIUSH Clinics",
+    "subtitle": "We are dedicated to providing compassionate and professional healthcare to our community. From routine checkups to chronic condition management, we're here for you."
+  },
+  "services": [
+    {
+      "icon": "🤒",
+      "name": "General Consultation",
+      "desc": "Diagnosis and treatment for fever, infections, cold, flu, and common ailments."
+    },
+    {
+      "icon": "💊",
+      "name": "Chronic Disease Management",
+      "desc": "Ongoing care and monitoring for diabetes, hypertension, and other long-term conditions."
+    },
+    {
+      "icon": "🛡️",
+      "name": "Preventive Healthcare",
+      "desc": "Routine checkups, health screenings, and vaccinations to keep you healthy."
+    },
+    {
+      "icon": "📹",
+      "name": "Video Consultation",
+      "desc": "Consult Dr. Shukla from the comfort of your home. Just ₹500 per session."
+    },
+    {
+      "icon": "💬",
+      "name": "Online Messaging",
+      "desc": "Quick health queries answered via WhatsApp or message. Just ₹100."
+    },
+    {
+      "icon": "🩹",
+      "name": "Burn & Wound Care",
+      "desc": "Expert treatment and follow-up for burns, wounds, and post-injury recovery."
+    }
+  ],
+  "faq": [
+    {
+      "question": "🕐 What are your consultation timings?",
+      "answer": "We are open Monday to Saturday, 10:00 AM to 7:00 PM. We are closed on Sundays. For emergency queries, please WhatsApp us."
+    },
+    {
+      "question": "💰 What are the consultation fees?",
+      "answer": "₹100 for online messaging consultations and ₹500 for video consultations. In-person fees may vary — please call us for details."
+    },
+    {
+      "question": "📋 Do I need to bring any documents?",
+      "answer": "Please bring any previous prescriptions and recent medical reports if available. This helps Dr. Shukla provide a more accurate diagnosis and personalized treatment plan."
+    },
+    {
+      "question": "📹 How do I do a video consultation?",
+      "answer": "Book an appointment via the form above or WhatsApp us at 8305194236. We’ll send you a video call link at your confirmed appointment time."
+    },
+    {
+      "question": "📍 Where are you located?",
+      "answer": "We are located at Link Road Camp 2, Bhilai, Chhattisgarh. You can also email us at shuklanitish762@gmail.com for directions."
+    }
+  ],
+  "warrior": {
+    "name": "Ayush",
+    "age": "Age 7",
+    "condition": "Burn Victim Recovery",
+    "story": "Ayush, a 7-year-old boy, came to SHIUSH Clinics after suffering severe burns. Through expert care and compassionate, personalized treatment by Dr. Nitish Shukla, he has made a truly remarkable recovery.",
+    "quote": "“His story is a true testament to the healing power of modern medicine and personalized care. We are proud of our brave little warrior.” — Dr. Nitish Shukla"
+  },
+  "news": [
+    {
+      "tag": "urgent",
+      "tag_label": "🔴 Tomorrow",
+      "title": "Free Medical Checkup Camp at SHIUSH Clinic!",
+      "body": "Join us tomorrow for a free medical checkup camp open to all community members. No prior appointment needed.",
+      "meta": "📍 Link Road Camp 2, Bhilai  ·  📞 7646890193"
+    },
+    {
+      "tag": "info",
+      "tag_label": "🎉 Special Offer",
+      "title": "50% Discount on All Lab Tests During the Camp",
+      "body": "During the health camp, avail 50% off on all routine lab tests including blood work, sugar levels, and more.",
+      "meta": "🏷️ Limited time offer  ·  Valid during camp only"
+    },
+    {
+      "tag": "update",
+      "tag_label": "📋 Clinic Update",
+      "title": "Video Consultations Now Available 6 Days a Week",
+      "body": "Dr. Shukla is now available for video consultations Monday through Saturday. Book your slot at just ₹500 per session.",
+      "meta": "💻 Online  ·  ₹500/session"
+    }
+  ],
+  "admin_password": "123456"
+}
