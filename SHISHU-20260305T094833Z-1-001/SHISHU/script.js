@@ -185,12 +185,22 @@ function initNavbar() {
   hamburger && hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
     hamburger.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  });
+
+  // Close menu when clicking on close button
+  const navClose = document.getElementById('navClose');
+  navClose && navClose.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger && hamburger.classList.remove('active');
+    document.body.classList.remove('menu-open');
   });
 
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       hamburger && hamburger.classList.remove('active');
+      document.body.classList.remove('menu-open');
     });
   });
 }
